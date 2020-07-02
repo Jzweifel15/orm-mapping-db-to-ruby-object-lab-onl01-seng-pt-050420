@@ -45,11 +45,7 @@ class Student
     end
   end
   
-  def self.first_X_students_in_grade_10(num_students)
-    sql = <<-SQL
-      SELECT COUNT(name) FROM STUDENTS;
-    SQL
-  end
+
   
   def save
     sql = <<-SQL

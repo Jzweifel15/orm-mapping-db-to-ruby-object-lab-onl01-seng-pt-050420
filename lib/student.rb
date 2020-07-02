@@ -67,7 +67,7 @@ class Student
   def self.all_students_in_grade_X(grade_num)
     sql = <<-SQL
       SELECT * FROM students
-      WHERE grade = "?";
+      WHERE grade = ?;
     SQL
     DB[:conn].execute(sql, grade_num.to_s).map do |row|
       self.new_from_db(row)
